@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 760" role="img" aria-labelledby="title desc">
+<title id="title">Le cochon de Saint-Martin</title><desc id="desc">Illustration vectorielle originale d'un gros cochon humanoïde grotesque et drôle, en débardeur noir déchiré, avec un immense bourrelet destiné à se soulever au clic.</desc>
+<defs>
+ <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffb09e"/><stop offset=".45" stop-color="#e87578"/><stop offset="1" stop-color="#a83d50"/></linearGradient>
+ <linearGradient id="belly" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#ffb8a7"/><stop offset=".65" stop-color="#e98282"/><stop offset="1" stop-color="#bd5265"/></linearGradient>
+ <linearGradient id="snout" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffb7ad"/><stop offset="1" stop-color="#c75266"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur stdDeviation="11"/></filter>
+ <pattern id="grit" width="37" height="41" patternUnits="userSpaceOnUse"><circle cx="8" cy="9" r="1.7" fill="#672633" opacity=".17"/><path d="M20 27l5 -2" stroke="#672633" opacity=".14" stroke-width="2"/></pattern>
+</defs>
+<!-- offset ink splash -->
+<path d="M107 188l-18-28 37 5 12-42 27 35 34-42 8 52 46-14-21 43 47 15-36 29 26 32-48 0-15 43-28-34-37 25-7-42-44-8 30-27-24-31z" fill="#f05c37" opacity=".85"/>
+<ellipse cx="324" cy="704" rx="222" ry="24" fill="#08080d" opacity=".55" filter="url(#shadow)"/>
+<!-- legs and boots -->
+<path d="M205 580c-8 39-16 62-16 87 0 18 21 25 52 23 28-2 43-10 41-28l-2-83z" fill="url(#skin)" stroke="#321b25" stroke-width="8" stroke-linejoin="round"/>
+<path d="M342 582l-4 78c-1 21 15 31 42 31 30 0 51-7 50-26l-7-89z" fill="url(#skin)" stroke="#321b25" stroke-width="8" stroke-linejoin="round"/>
+<path d="M179 674q21-18 47-6l39 2q23 18 8 39h-99q-16-14 5-35z" fill="#24202a" stroke="#100e14" stroke-width="8"/>
+<path d="M345 675q22-16 47-3l43 0q23 14 8 37h-95q-17-15-3-34z" fill="#24202a" stroke="#100e14" stroke-width="8"/>
+<path d="M194 695h71m97 0h66" stroke="#ff6c3e" stroke-width="5" stroke-linecap="round"/>
+<!-- arms -->
+<path d="M197 292c-36 12-59 44-74 82l-30 74c-10 25 7 42 26 34 12-5 20-26 28-40l43-61 46-35z" fill="url(#skin)" stroke="#321b25" stroke-width="9" stroke-linejoin="round"/>
+<path d="M436 295c31 4 57 29 76 63l40 73c13 23 0 41-19 38-15-2-24-23-34-38l-49-52-47-32z" fill="url(#skin)" stroke="#321b25" stroke-width="9" stroke-linejoin="round"/>
+<!-- fingers -->
+<path d="M95 437l-20 20q-5 12 5 17 11 5 24-12l11-13m383-3l21 25q10 10 18 1 7-9-7-25l-12-13" fill="none" stroke="#321b25" stroke-width="8" stroke-linecap="round"/>
+<!-- body behind belly -->
+<path d="M194 246q-19 40-16 105l17 173q10 58 126 61 120-2 131-60l13-177q2-66-34-96z" fill="url(#skin)" stroke="#321b25" stroke-width="10" stroke-linejoin="round"/>
+<!-- torn tanktop -->
+<path d="M210 265q-7-18 5-33l36-25 24 15q27 12 57 8 31-1 51-19l25 13 31 37q-18 53-45 75l-8 82-132 0-7-83q-23-26-37-70z" fill="#25212a" stroke="#100f16" stroke-width="9" stroke-linejoin="round"/>
+<path d="M249 224q-3 30 17 49l-8 29m125-76q0 30-19 49l10 25" fill="none" stroke="#ff8e79" stroke-width="10" stroke-linecap="round"/>
+<path d="M231 281l16 14-10 13 16 12m155-29l-13 10 9 12-16 13" fill="none" stroke="#f16649" stroke-width="6"/>
+<!-- huge belly roll (will be animated in CSS) -->
+<g id="belly-roll">
+ <path d="M147 407q14-47 61-53 95-16 225 1 49 7 68 52 13 30 1 84-20 86-97 116-88 34-187 1-73-24-87-103-8-48 16-98z" fill="#6b293a" opacity=".8" transform="translate(0 9)"/>
+ <path d="M145 396q18-48 63-57 112-20 225 1 48 8 66 52 16 38-1 85-23 72-94 100-85 34-180 4-74-23-91-95-12-49 12-90z" fill="url(#belly)" stroke="#321b25" stroke-width="10" stroke-linejoin="round"/>
+ <path d="M166 397q20-34 61-41 96-15 179 1 38 7 51 35" fill="none" stroke="#ffd0bd" stroke-width="10" stroke-linecap="round" opacity=".65"/>
+ <path d="M235 446q15 14 31 0m105 4q17 14 33-2" fill="none" stroke="#9b3f54" stroke-width="8" stroke-linecap="round" opacity=".65"/>
+ <path d="M306 481q-12 10-4 25 9 8 18-3" fill="none" stroke="#9b3f54" stroke-width="5" stroke-linecap="round"/>
+ <circle cx="190" cy="451" r="5" fill="#8e354b"/><circle cx="437" cy="466" r="4" fill="#8e354b"/><circle cx="264" cy="548" r="4" fill="#8e354b"/>
+</g>
+<!-- neck -->
+<path d="M258 211q-7 24-2 42 18 23 62 23 43-2 59-25 5-20-5-43z" fill="url(#skin)" stroke="#321b25" stroke-width="8"/>
+<!-- ears -->
+<path d="M226 87q-39-50-66-20-16 23 19 74l45 25z" fill="url(#skin)" stroke="#321b25" stroke-width="9"/>
+<path d="M414 86q36-52 64-21 17 21-17 75l-43 24z" fill="url(#skin)" stroke="#321b25" stroke-width="9"/>
+<path d="M194 88q-18-19-25-5l23 32m231-28q19-20 27-4l-22 33" fill="none" stroke="#8d3349" stroke-width="8" stroke-linecap="round"/>
+<!-- head -->
+<path d="M220 84q19-41 99-43 80 2 101 43 17 34 1 90-16 65-101 76-82-8-100-74-15-55 0-92z" fill="url(#skin)" stroke="#321b25" stroke-width="10" stroke-linejoin="round"/>
+<!-- messy hair -->
+<path d="M232 69l-9-22 26 7 10-28 21 23 15-30 18 27 24-21 5 30 28-15-2 27" fill="#28212b" stroke="#160f17" stroke-width="7" stroke-linejoin="round"/>
+<!-- brow -->
+<path d="M244 106q25-22 50-5m48-1q27-17 53 7" fill="none" stroke="#46202a" stroke-width="12" stroke-linecap="round"/>
+<!-- eyes -->
+<ellipse cx="270" cy="124" rx="22" ry="27" fill="#f6e8c2" stroke="#321b25" stroke-width="7"/><ellipse cx="369" cy="124" rx="22" ry="27" fill="#f6e8c2" stroke="#321b25" stroke-width="7"/>
+<ellipse cx="276" cy="128" rx="9" ry="14" fill="#34202b"/><ellipse cx="364" cy="128" rx="9" ry="14" fill="#34202b"/><circle cx="279" cy="123" r="3.5" fill="#fff"/><circle cx="367" cy="123" r="3.5" fill="#fff"/>
+<!-- snout -->
+<path d="M267 151q-7-18 8-27 43-17 87 1 17 9 8 29l-14 25q-35 24-72 0z" fill="url(#snout)" stroke="#321b25" stroke-width="8"/>
+<ellipse cx="294" cy="151" rx="8" ry="11" fill="#491d2b"/><ellipse cx="344" cy="151" rx="8" ry="11" fill="#491d2b"/>
+<!-- mouth and teeth -->
+<path d="M255 178q65 48 128-1 9-7 10 4-4 43-71 46-61-2-72-39-4-13 5-10z" fill="#35101f" stroke="#321b25" stroke-width="7"/>
+<path d="M269 186l15 4-2 19q-11-5-13-23zm29 9l16 2-1 19-13-3zm29 2l17-4 4 20-16 3zm31-7l15-7 3 20-14 7z" fill="#f7e5ca" stroke="#9d6a70" stroke-width="3" stroke-linejoin="round"/>
+<path d="M311 218q8-4 17 0" stroke="#ff8b7b" stroke-width="9" stroke-linecap="round"/>
+<!-- facial grime, stitches -->
+<path d="M226 155l-10 11m17-4l-9 12m191-26l9 12m-18-2l12 12" stroke="#7d2c43" stroke-width="5" stroke-linecap="round"/>
+<circle cx="241" cy="143" r="4" fill="#6d2539"/><circle cx="395" cy="147" r="4" fill="#6d2539"/>
+<!-- little halloween scar -->
+<path d="M398 200l15-9m-12 18l15-9m-12 18l15-9" stroke="#762638" stroke-width="4" stroke-linecap="round"/>
+<!-- ink/grain overlay -->
+<path d="M100 160h39m354 44h37M117 552h42m-5 22h23M463 568h35" stroke="#f8a15e" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+<path d="M99 220l9 9m-9-3l9 9M514 281l9 9m-9-3l9 9" stroke="#f8a15e" stroke-width="4"/>
+</svg>

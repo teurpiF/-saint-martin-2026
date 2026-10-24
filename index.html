@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171416">
+<title>Saint-Martin 2026</title>
+<style>
+:root{--bg:#171416;--cream:#f4e8d9;--muted:#c8b9b8;--orange:#f05b3a;--plum:#39252d;--pink:#e98282}
+*{box-sizing:border-box}html{min-height:100%;background:var(--bg)}body{margin:0;min-height:100vh;color:var(--cream);font-family:Impact,"Arial Narrow",system-ui,sans-serif;letter-spacing:.03em;background:radial-gradient(ellipse at 50% 32%,#39242e 0%,#21191f 43%,var(--bg) 78%);overflow-x:hidden}
+.page{width:min(100% - 28px,640px);margin:auto;min-height:100vh;display:flex;flex-direction:column;align-items:center;text-align:center;padding:28px 0 24px;position:relative}.eyebrow{font:700 11px/1.4 system-ui,sans-serif;letter-spacing:.28em;color:#f29c79;text-transform:uppercase;margin:3px 0 7px}.title{margin:0;font-size:clamp(42px,11vw,72px);line-height:.86;font-weight:1000;letter-spacing:-.045em;text-transform:uppercase;text-shadow:3px 4px 0 #7d2e35,7px 9px 0 #0b0a0e}.year{font-size:clamp(28px,7vw,42px);line-height:1;color:var(--orange);letter-spacing:.15em;margin:12px 0 7px}.date{font:800 12px/1.5 system-ui,sans-serif;letter-spacing:.18em;color:var(--muted);margin:0 0 5px}.intro{font:500 14px/1.5 system-ui,sans-serif;color:#d6c5c7;margin:7px 0 0}.character{width:min(100%,440px);position:relative;margin:-3px auto -1px;isolation:isolate}.character:before{content:"";position:absolute;inset:8% 7% 0;border-radius:50%;background:#ef5935;filter:blur(65px);opacity:.14;z-index:-1}.character img{display:block;width:100%;height:auto;filter:drop-shadow(0 20px 16px #08070a88)}.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:3px solid #ffb09a;border-radius:9px;background:linear-gradient(#f56e4b,#d83e31);color:#fff8ee;text-transform:uppercase;font-weight:1000;font-size:clamp(15px,4vw,18px);letter-spacing:.045em;padding:17px 23px;box-shadow:0 7px 0 #71252a,0 12px 24px #09080d66;cursor:pointer;transform:translateY(0);transition:transform .15s,box-shadow .15s,filter .15s;max-width:100%;font-family:inherit}.button:hover{filter:brightness(1.08)}.button:active{transform:translateY(5px);box-shadow:0 2px 0 #71252a}.button:focus-visible{outline:3px solid white;outline-offset:5px}.hint{font:500 11px/1.5 system-ui,sans-serif;color:#bda5ab;margin:13px 0 0;letter-spacing:.06em}.timer-wrap{width:100%;max-height:0;overflow:hidden;opacity:0;transform:translateY(-10px) scale(.97);transition:max-height .7s ease,opacity .45s ease,transform .55s ease;margin-top:0}.timer-wrap.revealed{max-height:290px;opacity:1;transform:translateY(0) scale(1);margin-top:23px}.timer-heading{font:900 14px/1.3 system-ui,sans-serif;letter-spacing:.15em;color:#ffc1a4;margin:0 0 12px;text-transform:uppercase}.timer{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.unit{background:#21171d;border:1px solid #7d4552;border-radius:10px;padding:15px 4px 12px;box-shadow:inset 0 0 22px #f45e3b12}.number{display:block;font:1000 clamp(24px,7vw,40px)/1 system-ui,sans-serif;color:#fff0df;font-variant-numeric:tabular-nums;letter-spacing:-.04em}.label{display:block;font:700 10px/1.3 system-ui,sans-serif;color:#d7aeb4;text-transform:uppercase;letter-spacing:.1em;margin-top:8px}.finished{font:800 18px/1.4 system-ui,sans-serif;color:#ffb29a;margin:12px}.footer{font:500 10px/1.5 system-ui,sans-serif;color:#78666b;margin-top:auto;padding-top:26px;letter-spacing:.1em}.is-open .character img{animation:belly-lift .9s cubic-bezier(.2,.8,.2,1) both}@keyframes belly-lift{0%{transform:translateY(0) rotate(0) scale(1)}25%{transform:translateY(10px) rotate(-1deg) scale(1.015)}50%{transform:translateY(-13px) rotate(1.2deg) scale(1.025)}75%{transform:translateY(-8px) rotate(-.5deg) scale(1.01)}100%{transform:translateY(0) rotate(0) scale(1)}}@media(min-width:520px){.page{padding-top:35px}.character{width:410px}.date{font-size:13px}.button{padding:18px 28px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main class="page" id="page">
+  <p class="eyebrow">Une date. Un cochon. Zéro dignité.</p>
+  <h1 class="title">Saint-Martin</h1>
+  <p class="year">2026</p>
+  <p class="date">SAMEDI 21 NOVEMBRE · DÉPART À 12 H 40</p>
+  <p class="intro">Le compte à rebours est planqué. À toi de voir si tu oses.</p>
+  <div class="character" id="character"><img src="cochon-saint-martin.svg" alt="Un énorme cochon humanoïde grotesque, au sourire inquiétant, avec un ventre énorme" fetchpriority="high"></div>
+  <button class="button" id="reveal" type="button" aria-expanded="false" aria-controls="timer"><span aria-hidden="true">☠</span> Soulève le bourrelet <span aria-hidden="true">☠</span></button>
+  <p class="hint" id="hint">Attention : il n'a pas pris de douche depuis la dernière Saint-Martin.</p>
+  <section class="timer-wrap" id="timer" aria-live="polite" aria-label="Compte à rebours jusqu'à Saint-Martin 2026">
+    <p class="timer-heading">Le compte à rebours est dévoilé !</p>
+    <div class="timer" id="clock">
+      <div class="unit"><span class="number" id="days">--</span><span class="label">Jours</span></div>
+      <div class="unit"><span class="number" id="hours">--</span><span class="label">Heures</span></div>
+      <div class="unit"><span class="number" id="minutes">--</span><span class="label">Minutes</span></div>
+      <div class="unit"><span class="number" id="seconds">--</span><span class="label">Secondes</span></div>
+    </div>
+    <p class="finished" id="finished" hidden>C'est l'heure ! Que Saint-Martin commence…</p>
+  </section>
+  <footer class="footer">SAINT-MARTIN 2026 · À OUVRIR AVEC UN MINIMUM DE COURAGE</footer>
+</main>
+<script>
+(() => {
+  // Date fixée en heure de Paris (CET, UTC+1) : 21 novembre 2026 à 12 h 40.
+  const target = new Date('2026-11-21T12:40:00+01:00').getTime();
+  const $ = id => document.getElementById(id);
+  const button = $('reveal'), timer = $('timer'), page = $('page');
+  let interval = null;
+  function updateClock() {
+    const remaining = target - Date.now();
+    if (remaining <= 0) {
+      ['days','hours','minutes','seconds'].forEach(id => $(id).textContent = '00');
+      $('finished').hidden = false;
+      clearInterval(interval);
+      return;
+    }
+    const total = Math.floor(remaining / 1000);
+    $('days').textContent = String(Math.floor(total / 86400)).padStart(2,'0');
+    $('hours').textContent = String(Math.floor((total % 86400) / 3600)).padStart(2,'0');
+    $('minutes').textContent = String(Math.floor((total % 3600) / 60)).padStart(2,'0');
+    $('seconds').textContent = String(total % 60).padStart(2,'0');
+  }
+  button.addEventListener('click', () => {
+    const opening = !timer.classList.contains('revealed');
+    timer.classList.toggle('revealed', opening);
+    page.classList.remove('is-open');
+    // Relance l'animation à chaque ouverture.
+    if (opening) {
+      void $('character').offsetWidth;
+      page.classList.add('is-open');
+      button.setAttribute('aria-expanded','true');
+      button.innerHTML = '<span aria-hidden="true">☠</span> Refermer le bourrelet <span aria-hidden="true">☠</span>';
+      updateClock();
+      clearInterval(interval);
+      interval = setInterval(updateClock, 1000);
+      $('hint').textContent = 'Voilà. Tu ne pourras pas dire que tu n’étais pas prévenu.';
+      setTimeout(() => timer.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'nearest'}), 250);
+    } else {
+      button.setAttribute('aria-expanded','false');
+      button.innerHTML = '<span aria-hidden="true">☠</span> Soulève le bourrelet <span aria-hidden="true">☠</span>';
+      $('hint').textContent = 'Attention : il n\'a pas pris de douche depuis la dernière Saint-Martin.';
+      clearInterval(interval);
+    }
+  });
+})();
+</script>
+</body>
+</html>
